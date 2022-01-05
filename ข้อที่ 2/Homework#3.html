@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        body{
+            background-color: lightsteelblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin: auto;
+            height: 150vh;
+            padding: 0;
+            max-width: 1498px;
+            margin: auto;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            height: 100vh;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+        }
+        .box1{
+            flex-basis: 450px;
+        }
+        .img{
+            display: flex;
+            justify-self: flex-start;
+            margin-left: -30px;
+            margin-bottom: -30px;
+            width: 100%;
+            height: 100px;
+        }
+        .box2{
+            background-color: whitesmoke;
+            flex-basis: 450px;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px grey;
+        }
+        input[type=text]{
+            display: block;
+            padding: 10px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            width: 90%;
+            margin: 20px 10px;
+        }
+        input[type=submit]{
+            width: 95%;
+            background-color: #1877f2;
+            border: 1px solid grey;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 10px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            background-color: #204f8b;
+        }
+        .line{
+            width: 400px;
+            padding-left: 25px;
+        }
+        .link{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 0;
+        }
+        input[type=button]{
+            width: 50%;
+            background-color: #42b72a;
+            border: 1px solid grey;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px 115px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .box3{
+            display: inline-block;
+            padding: 20px;
+            color: black;
+            margin-left: 80px;
+        }
+        .box4{
+            display: flex; 
+            flex-wrap: wrap;
+            background-color: rgb(250, 249, 248);
+            width: auto;
+            height: 50vh;
+            margin-top: 40px;
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+       .box5{
+            width: 950px;
+            height: auto;
+            margin: 0 auto;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            padding-top: 30px;
+            margin-left: -20px;
+            word-spacing: 5px;
+            line-height: 1.6;
+        }
+        .list a{
+            color: grey; 
+            text-decoration: none;
+        }
+        .list > *{
+            display: inline-block;
+            border-width: 0 0 0 1;
+            vertical-align: top;
+            padding-left: 20px;
+            padding-right: 0;
+        }
+        .box6{
+            margin-top: 20px; 
+            color: gray;
+        }
+        @media (max-width: 900px){
+            h1{text-align: center;}
+            .img{width: 100%; margin: 0px; padding: 0px;justify-content: center; margin-bottom: -20px;}
+            .box4{margin: 0px; width: 100%;}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1">
+        <div class="img">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">
+        </div>
+        <h1>Facebook ช่วยคุณเชื่อมต่อและแชร์กับผู้คนมากมายรอบตัวคุณ</h1>
+    </div>
+    <div class="box2">
+        <form action="/action_page.php">
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="อีเมลหรือหมายเลขโทรศัพท์มือถือ">
+            
+            <label for="password"></label>
+            <input type="text" id="password" name="password" placeholder="รหัสผ่าน">
+
+            <input type="submit" value="เข้าสู่ระบบ">
+        </form>
+        <p><a class="link" href="https://th-th.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjQwNDM4MzA5LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&amp;ars=facebook_login">ลืมรหัสผ่านใช่หรือไม่</a></p>
+        <div class="line"><hr></div>
+        <form action="/action_page.php">
+            <input type="button" value="สร้างบัญชี">
+        </form>
+        <p><a class="box3" href="#"><b>สร้างเพจ</b></a>สำหรับคนดัง แบรนด์ หรือธุรกิจ</p>
+    </div>
+</div>
+        <div class="box4">
+            <div class="box5">
+                <ul class="list">
+                    <li><a  href="/reg/" title="สมัครใช้งาน Facebook">สมัคร</a></li>
+                    <li><a  href="/login/" title="เข้าสู่ระบบ Facebook">เข้าสู่ระบบ</a></li>
+                    <li><a  href="https://messenger.com/" title="เข้าไปดู Messenger">Messenger</a></li>
+                    <li><a  href="/lite/" title="Facebook Lite สำหรับ Android">Facebook Lite</a></li>
+                    <li><a  href="https://th-th.facebook.com/watch/" title="เลือกดูวิดีโอ Watch ของเรา">Watch</a></li>
+                    <li><a  href="/places/" title="ดูสถานที่ที่กำลังเป็นที่นิยมบนเฟซบุ๊ค">สถานที่</a></li>
+                    <li><a  href="/games/" title="ลองเล่นเกมบน Facebook">เกม</a></li>
+                    <li><a  href="/marketplace/" title="ซื้อและขายสินค้าบน Facebook Marketplace">Marketplace</a></li>
+                    <li><a  href="https://pay.facebook.com/" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Facebook Pay" target="_blank">Facebook Pay</a></li>
+                    <li><a  href="/jobs/" title="สมัครและรับสมัครงานบน Facebook">งาน</a></li>
+                    <li><a  href="https://www.oculus.com/" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Oculus" target="_blank">Oculus</a></li>
+                    <li><a  href="https://portal.facebook.com/" title="เรียนรู้เพิ่มเติมเกี่ยวกับ Facebook Portal" target="_blank">Portal</a></li>
+                    <li><a  href="https://www.instagram.com/" title="ลองดู Instagram" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F&amp;h=AT3okheOOBdokGug5LkpDbtcIEyMz-ADT9_pE8Dc8Fws3Uhf50SGruFjeeNYa9K9HPiEeYq_RJXqx45dXJOUxOkDmKzZUVn9tnsa2jn_wulfQfkClYKWUVbbRW5CdBs5ipMIkFrhDldlqDTMQEgj5H9VwgBPv5pUXJamFg">Instagram</a></li>
+                    <li><a  href="https://www.bulletin.com/" title="ดูจดหมายข่าวของ Bulletin">Bulletin</a></li>
+                    <li><a  href="/local/lists/245019872666104/" title="ดูไดเรกทอรีรายการ Local ของเรา">ในพื้นที่</a></li>
+                    <li><a  href="/fundraisers/" title="บริจาคให้กับการกุศลที่น่ายกย่อง">โครงการระดมทุน</a></li>
+                    <li><a  href="/biz/directory/" title="ดูไดเรกทอรีบริการ Facebook ของเรา">บริการ</a></li>
+                    <li><a  href="/votinginformationcenter/?entry_point=c2l0ZQ%3D%3D" title="ดูศูนย์ข้อมูลการลงคะแนนเสียง">ศูนย์ข้อมูลการลงคะแนนเสียง</a></li>
+                    <li><a  href="/groups/explore/" title="สำรวจกลุ่มของเรา">กลุ่ม</a></li>
+                    <li><a href="https://about.facebook.com/" accesskey="8" title="อ่านเว็บบล็อกของเรา สำรวจศูนย์รวมแหล่งข้อมูล และค้นหาโอกาสในการจ้างงาน">เกี่ยวกับ</a></li>
+                    <li><a  href="/ad_campaign/landing.php?placement=pflo&amp;campaign_id=402047449186&amp;nav_source=unknown&amp;extra_1=auto" title="ลงโฆษณาบน Facebook">สร้างโฆษณา</a></li>
+                    <li><a  href="/pages/create/?ref_type=site_footer" title="สร้างเพจ">สร้างเพจ</a></li>
+                    <li><a  href="https://developers.facebook.com/?ref=pf" title="พัฒนาบนแพลตฟอร์มของเรา">ผู้พัฒนา</a></li>
+                    <li><a  href="/careers/?ref=pf" title="ก้าวหน้าไปอีกขั้นในหน้าที่การงานของคุณด้วยการมาร่วมงานกับบริษัทที่ยอดเยี่ยมของเรา">ร่วมงานกับ Facebook</a></li>
+                    <li><a  data-nocookies="1" href="/privacy/explanation" title="เรียนรู้เกี่ยวกับความเป็นส่วนตัวของคุณและ Facebook">ความเป็นส่วนตัว</a></li>
+                    <li><a  href="/policies/cookies/" title="เรียนรู้เกี่ยวกับคุกกี้และ Facebook" data-nocookies="1">คุกกี้</a></li>
+                    <li><a  class="_41ug" data-nocookies="1" href="https://th-th.facebook.com/help/568137493302217" title="เรียนรู้เกี่ยวกับตัวเลือกโฆษณา">ตัวเลือกโฆษณา<i class="img sp_gMujFo71RwJ sx_bdef52"></i></a></li>
+                    <li><a  data-nocookies="1" href="/policies?ref=pf" accesskey="9" title="อ่านข้อกำหนดและนโยบายของเรา">เงื่อนไข</a></li>
+                    <li><a  href="/help/?ref=pf" accesskey="0" title="ไปที่ศูนย์ช่วยเหลือของเรา">ความช่วยเหลือ</a></li>
+                    <li><a  accesskey="6" class="accessible_elem" href="/settings" title="ดูและแก้ไขการตั้งค่า Facebook ของคุณ">การตั้งค่า</a></li>
+                    <li><a  accesskey="7" class="accessible_elem" href="/allactivity?privacy_source=activity_log_top_menu" title="ดูบันทึกกิจกรรมของคุณ">บันทึกกิจกรรม</a></li>
+                </ul>
+                <hr>
+                <div class="box6">
+                    <span> Meta © 2021</span>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
