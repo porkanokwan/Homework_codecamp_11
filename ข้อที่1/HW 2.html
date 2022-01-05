@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+    <style>
+        .container{
+            width: 300px;
+        }
+        .row{
+            margin: 10px;
+            padding: 10px;
+        }
+        .row3  div{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <table>
+        <tr class="row">
+            <td>
+                <form action="/action_page.php">
+                    <label for="from">Flying from</label> <br>
+                    <select name="from" id="from">
+                        <option value="Karachi, Pakist">Karachi, Pakist</option>
+                        <option value="London, England">London, England</option>
+                    </select>
+                </form>
+            </td>
+            <td>
+                <form action="/action_page.php">
+                    <label for="to">To</label> <br>
+                    <select name="to" id="to">
+                        <option value="Isalamabad, Pai">Isalamabad, Pai</option>
+                        <option value="Paris, France">Paris, France</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr class="row2">
+            <td>
+                <form action="/action_page.php">
+                    <label for="departing">Departing</label> <br>
+                    <input type="date" name="departing">
+                </form>
+            </td>
+            <td>
+                <form action="/action_page.php">
+                    <label for="returning">Returning</label> <br>
+                    <input type="date" name="returning">
+                </form>
+            </td>
+        </tr>
+        <tr class="row3">
+            <td colspan="4">
+            <div class="box">
+                <form action="/action_page.php">
+                    <label for="adult">Adult</label> <br>
+                    <input type="number" name="adult" min="1" max="10" size="1">
+                </form>
+            </div>
+            <div class="box1">
+                <form action="/action_page.php">
+                    <label for="child">Child</label> <br>
+                    <input type="number" name="child" min="1" max="10" size="1">
+                </form>
+            </div>
+            <div class="box2">
+                <form action="/action_page.php">
+                    <label for="infant">Infant</label> <br>
+                    <input type="number" name="infant" min="1" max="10" size="1">
+                </form>
+            </div>
+            <div class="box3">
+                <form action="/action_page.php">
+                    <label for="currency">Currency</label> <br>
+                    <select name="currency" id="currency">
+                        <option value="PKR">PKR</option>
+                    </select>
+                </form>
+            </div>
+            </td>
+        </tr>
+        <tr class="row4">
+            <td>
+            <form action="/action_page.php">
+                <input type="submit" value="SEARCH" style="color: white; background-color: tomato; border-radius: 5px; border: none;">
+            </form>
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

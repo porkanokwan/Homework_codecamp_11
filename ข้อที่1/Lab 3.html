@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Form</title>
+    <style>
+        table{
+            border: 1px solid black;
+        }
+        th,td{
+            border: 1px solid black;
+        }
+        .row1 th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab 3 ทำฟอร์มสั่งพิซซ่า</h1>
+        <table>
+            <tr class="row1">
+                <th colspan="2">Pizza Shop 2.0</th>
+            </tr>
+            <tr class="row2">
+                <td>Name</td>
+                <td>       
+                     <form action="/action_page.php">
+                        <input type="text" name="fname">
+                    </form>
+                </td>
+            </tr>
+            <tr class="row3">
+                <td>Pizza Topping</td>
+                <td>
+                    <form action="/action_page.php">
+                        <input type="radio" name="topping" value="Supreme">
+                        <label for="Supreme">Supreme</label> <br>
+                        <input type="radio" name="topping" value="Vegetarian">
+                        <label for="Vegetarian">Vegetarian</label> <br>
+                        <input type="radio" name="topping" value="Hawaiian">
+                        <label for="Hawaiian">Hawaiian</label>
+                    </form>
+                </td>
+            </tr>
+            <tr class="row3">
+                <td>Pizza Sauce</td>
+                <td>
+                    <form action="/action_page.php">
+                        <select name="sauce" id="sauce">
+                            <option value="Tomato">Tomato</option>
+                            <option value="Thounsand">Thounsand island</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr class="row4">
+                <td>Optional Extras</td>
+                <td>
+                    <form action="/action_page.php">
+                        <input type="checkbox" name="extra1" value="Extra Cheese">
+                        <label for="extra1">Extra Cheese</label>
+
+                        <input type="checkbox" name="extra2" value="Gluten Free Base">
+                        <label for="extra2">Gluten Free Base</label>
+                    </form>
+                </td>
+            </tr>
+            <tr class="row5">
+                <td colspan="2">
+                    <p>Delivery Instruction</p>
+                    <textarea name="instruction" id="instruction" cols="60" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr class="row6">
+                <td colspan="2">
+                    <form action="/action_page.php">
+                        <input type="submit" value="Send my Order">
+                    </form>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>
