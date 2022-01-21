@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator: หาผลลัพธ์ของ statement ต่อไปนี้</title>
+</head>
+<body>
+    <script>
+        let a = "" + 1 + 0; //10
+        let b = "" - 1 + 0; //-1
+        let c = true + false; //1
+        let d = 6 / "3"; //2
+        let e = "2" * "3"; //6
+        let f = 4 + 5 + "px"; //9px
+        let g = "$" + 4 + 5; //$45
+        let h = "4" - 2; //2
+        let i = "4px" - 2; //NaN
+        let j = 7/0; //infinity
+        let k = "- 9" + 5; //-95
+        let l = "- 9" - 5; //-14
+        let m = null + 1; //1
+        let n = undefined + 1; //NaN
+        let o = "\t\n" - 2; //-2
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        console.log(f);
+        console.log(g);
+        console.log(h);
+        console.log(i);
+        console.log(j);
+        console.log(k);
+        console.log(l);
+        console.log(m);
+        console.log(n);
+        console.log(o);
+    </script>
+</body>
+</html>
