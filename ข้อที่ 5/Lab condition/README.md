@@ -1,6 +1,6 @@
 # Homework_codecamp_11
     1. Kanokwan Dulyapraphant
-    2. แบบผิกหัด
+    2. แบบผฝึกหัด
 1. Browser จะโชว์ข้อความอะไร
 2. ใช้ if else ในการเขียนถามชื่อของคุณ
 3. ใช้ prompt ในการรับคะแนนมาคำนวณเกรด

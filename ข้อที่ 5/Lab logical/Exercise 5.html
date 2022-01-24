@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5: ให้เขียนระบบ login</title>
+</head>
+<body>
+    <script>
+        let login = prompt('Who are you?');
+        let password;
+
+        if(login == null){
+            alert("ยกเลิก");
+        }else if(login != "Admin"){
+            alert("ผมไม่รู้จักคุณ");
+        }else if(login == "Admin"){
+            password = prompt('Put your password');
+        } 
+        
+        if(password == null){
+            alert("ยกเลิก");
+        }else if(password == "codecamp#8"){
+            alert("ยินดีต้อนรับ");
+        }else if(password != "codecamp#8"){
+            alert("Wrong password")
+        }
+    </script>
+</body>
+</html>
