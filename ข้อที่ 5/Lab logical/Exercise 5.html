@@ -11,20 +11,19 @@
         let login = prompt('Who are you?');
         let password;
 
-        if(login == null){
+        if(login == "Admin"){
+            password = prompt('Put your password');
+            if(password == "codecamp#8"){
+                alert("ยินดีต้อนรับ");
+            }else if(password == null || password == ""){
+                alert("ยกเลิก");
+            }else {
+                alert("Wrong password")
+            }
+        }else if(login == null || login == ""){
             alert("ยกเลิก");
         }else if(login != "Admin"){
             alert("ผมไม่รู้จักคุณ");
-        }else if(login == "Admin"){
-            password = prompt('Put your password');
-        } 
-        
-        if(password == null){
-            alert("ยกเลิก");
-        }else if(password == "codecamp#8"){
-            alert("ยินดีต้อนรับ");
-        }else if(password != "codecamp#8"){
-            alert("Wrong password")
         }
     </script>
 </body>
