@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6: ให้เขียนเกมส์ทายตัวเลขสำหรับเล่นสองคน</title>
+</head>
+<body>
+    <script>
+        let player1 = +prompt("Choose number 1-100", "");
+        let player2;
+        
+        while(player2 != player1){
+            player2 = +prompt("Guess number", "");
+            if(player2 > player1){
+                alert("That's so high");
+            }else if(player2 < player1){
+                alert("Very low");
+            }
+        }
+        alert("That's right!!!!, well done")
+    </script>
+</body>
+</html>
