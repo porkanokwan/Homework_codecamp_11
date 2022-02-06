@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อ 12: จงเขียน method draw(n) ให้ print ออกมาในกรณีที่ n มีค่าต่างๆ ได้ผลลัพธ์ ดังนี้</title>
+</head>
+<body>
+    <script>
+                function draw(n){
+            for(let col = 0; col < n; col++){
+                let line = ''
+                for (let row = 0; row < n; row++){
+                    if ((n - 1) - col === row) {
+                        line += '_';
+                    }else {
+                        line += '*';
+                    }
+                }
+                console.log(line);
+            }
+        }
+    </script>
+</body>
+</html>

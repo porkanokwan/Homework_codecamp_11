@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อ 7: จงเขียน method draw(n) ให้ print ออกมาในกรณีที่ n มีค่าต่างๆ ได้ผลลัพธ์ ดังนี้</title>
+</head>
+<body>
+    <script>
+        function draw(n){
+            let num = '';
+            let i = 0;
+            for(let col = 0; col < n*n; col++){
+                num = num + ((n*n) - col);
+                i++;
+                if(i % n === 0){
+                    num += "\n";
+                }
+            }
+            console.log(num);
+        }
+    </script>
+</body>
+</html>

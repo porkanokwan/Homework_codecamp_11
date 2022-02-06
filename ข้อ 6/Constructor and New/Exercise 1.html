@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <script>
+        function Calculator(){
+            this.read = function () {
+                this.number1 = +prompt('Enter first number');
+                this.number2 = +prompt('Enter second number');
+            }
+
+            this.sum = function () {
+                return this.number1 + this.number2;
+            }
+
+            this.mul = function () {
+                return this.number1 * this.number2;
+            }
+        }
+
+        let result = new Calculator();
+        result.read();
+        result.sum();
+        result.mul();
+    </script>
+</body>
+</html>
