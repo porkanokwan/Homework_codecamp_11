@@ -12,7 +12,7 @@
             for (let col = 0; col < n; col++) {
                 let line = '';
                 for (let row = 0; row < n; row++){
-                    if (row !== col) {
+                    if ( (col + row) % 1 === row || row === col || row + 1 === col ) {
                         line += '*';
                     }else {
                         line += '_';

@@ -7,6 +7,20 @@
     <title>ข้อ 18: จงเขียน method draw(n) ให้ print ออกมาในกรณีที่ n มีค่าต่างๆ ได้ผลลัพธ์ ดังนี้</title>
 </head>
 <body>
-    
+    <script>
+        function draw(n) {
+            for (let col = 0; col < n; col++) {
+                let line = '';
+                for (let row = 0; row < n; row++){
+                    if ((row * col) === col) {
+                        line += '*';
+                    }else {
+                        line += '_';
+                    }
+                }
+                console.log(line);
+            }
+        }
+    </script>
 </body>
 </html>
