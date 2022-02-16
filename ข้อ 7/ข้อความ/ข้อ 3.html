@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อ 3: เขียนฟังก์ชันที่ truncate(str, maxlength) โดยฟังก์ชันดังกล่าวจะเช็คว่า string ที่ถูกส่งเข้ามามีความยาวเกิน maxlength ไหม ถ้าเกินให้แทน ข้อความต่อจากนั้นด้วย “...”</title>
+</head>
+<body>
+    <script>
+        let str = "Strings in JavaScript are sequences of code units. You could expect that string comparison involves the evaluation of code units for a match: if the code units from both strings are equal."
+        function truncate(str, maxlength) {
+            if (str.length > maxlength) {
+                console.log( str.substr(0, maxlength) + '...' );
+            }else {
+                console.log( str.substr(0, maxlength) );
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อ 2: เขียนฟังก์ชันที่ checkSpam โดยถ้าข้อความดังกล่าวมีคำว่า “xxx” หรือ “viagra” ให้คืนค่าเป็น true ถ้าไม่มีให้คืนค่าเป็น false</title>
+</head>
+<body>
+    <script>
+        let str = " Strings in JavaScript are sequences of code units. You could expect that string comparison involves the evaluation of code units for a match: if the code units from both strings are equal."
+        function checkSpam() {
+           return ( str.indexOf("xxx") == -1 && str.indexOf("viagra") == -1 ) ?  false : true ; 
+        }
+
+        checkSpam() //false
+    </script>
+</body>
+</html>
