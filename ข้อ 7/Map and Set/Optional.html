@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram เป็นตัวอักษรที่มีจำนวนตัวอักษรแต่ละตัวที่เท่ากัน แต่เรียงไม่เหมือนกัน</title>
+</head>
+<body>
+    <script>
+        function aclean(arr) {
+            let arr1 = ["nap", "PAN"];
+            let arr2 = ["ear", "era"]
+            let arr3 = ["teachers", "cheaters", "hectares"]
+            let result;
+
+            let sum1 = '';
+            for (let i = 0; i < arr1.length; i++) {
+                sum1 += arr1[i].toLowerCase();
+            }
+
+            let sum2 = '';
+            for (let i = 0; i < arr2.length; i++) {
+                sum2 += arr2[i];
+            }
+
+            let sum3 = '';
+            for (let i = 0; i < arr1.length; i++) {
+                sum3 += arr3[i];
+            }
+
+            let s1 = Array.from(new Set(sum1)).join('');
+            let s2 = Array.from(new Set(sum2)).join('');
+            let s3 = Array.from(new Set(sum3)).join('');
+
+            return result = `${s1}, ${s2}, ${s3}`
+        }
+        let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+        alert( aclean(arr) );
+    </script>
+</body>
+</html>

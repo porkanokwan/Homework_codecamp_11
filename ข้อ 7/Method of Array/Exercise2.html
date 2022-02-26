@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ให้สร้าง array2 จาก array1 ตามที่โจทย์กำหนด โดยใช้ฟังก์ชัน Array.filter()</title>
+</head>
+<body>
+    <script>
+        2.1
+        const array1 = [1, 2, 30, 400];
+        const array2 = array1.filter( num => num > 10 );
+
+        2.2
+        const array1 = [1, 2, 3, 4];
+        const array2 = array1.filter( num => num % 2 !== 0);
+
+        2.3
+        const array1 = [1, "1", 2, {}];
+        const array2 = array1.filter( num => typeof num === "number" );
+
+        2.4
+        const array1 = ["apple", "banana", "orange", "pineapple", "watermelon"];
+        const array2 = array1.filter( item => item.length > 6 );
+
+        2.5
+        const array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ];
+        const array2 = array1.filter( item => item.age < 18 );
+
+        2.6
+        const array1 = [
+            { name: "apple", age: 14 },
+            { name: "banana", age: 18 },
+            { name: "watermelon", age: 32 },
+            { name: "pineapple", age: 16 },
+            { name: "peach", age: 24 },
+        ];
+        const array2 = array1.filter( item => item.age !== 32 )
+
+        2.7
+        const array1 = [1, -3, 2, 8, -4, 5];
+        const array2 = array1.filter( num => num !== -(Math.abs(num)) )
+
+        2.8
+        const array1 = [1,3,4,5,6,7,8];
+        const array2 = array1.filter( num => num % 3 === 0 );
+
+        2.9
+        const array1 = ["peach", 1, -3, "2", {}, []];
+        const array2 = array1.filter( item => typeof item === "string" )
+
+        2.10
+        const array1 = ["APPLE", "appLE", "PEACH", "PEach"];
+        const array2 = array1.filter( item => item === item.toUpperCase() )
+
+        2.11
+        const array1 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" }
+        ];
+        const array2 = array1.filter( function (obj) {
+            let date = new Date( obj.birth );
+            let month = date.getMonth() + 1;
+            return month === 10;
+        } );
+
+        2.12
+        const array1 = [
+            { name: "apple", birth: "2001-01-01" },
+            { name: "banana", birth: "1990-10-10" },
+            { name: "watermelon", birth: "1985-12-30" },
+            { name: "peach", birth: "2002-10-13" }
+        ];
+        const array2 = array1.filter( function (obj) {
+            let date = new Date( obj.birth );
+            let year = date.getFullYear();
+            return year < 2000
+        } );
+    </script>
+</body>
+</html>
