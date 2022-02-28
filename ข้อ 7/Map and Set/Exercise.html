@@ -10,9 +10,7 @@
     <script>
         function unique(arr) {
             let s = new Set (arr);
-            for( let item of s) {
-                alert( item );
-            };
+            let result = Array.from( s ).join(", ")
         }
         let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-0"];
         alert( unique(values) );
