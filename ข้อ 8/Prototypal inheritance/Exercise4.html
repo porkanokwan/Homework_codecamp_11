@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> การเขียน code แบบนี้ ควรแก้ไขอย่างไร</title>
+</head>
+<body>
+    <script>
+        let hamster = {
+            stomach: [],
+
+            eat(food) {
+                this.stomach.push( food ) ;
+            }
+        };
+
+        let speedy = {
+            __proto__: hamster,
+            stomach: [] //เพื่อรับคำสั่ง this.stomach.push( food ) 
+        };
+
+        let lazy = {
+            __proto__: hamster
+        }
+
+        //เฉลย
+        let hamster = {
+            // stomach: [],
+
+            eat(food) {
+                if( !this.stomach ) this.stomach = [];
+                this.stomach.push( food ) ;
+            }
+        };
+
+        let speedy = {
+            __proto__: hamster,
+        };
+
+        let lazy = {
+            __proto__: hamster
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+</head>
+<body>
+    <script>
+        function f(x) {
+            alert(x);
+        }
+
+        function delay(func, ms) {
+            let cache = new Map();
+            return function (x) {
+                if(cache.has(x)) {
+                    return setTimeout(func, ms);
+                }
+                let result = func.call(f, x);
+                cache.set(x, result);
+                return result;
+            }
+        }
+
+        let f1000 = delay(f, 1000);
+        let f1500 = delay(f, 1500);
+        f1000("test");
+        f1500("test");
+
+        //เฉลย
+        function f(x) {
+            alert(x);
+        }
+        
+        function delay(func, ms) {
+            return function (...arr) {
+                setTimeout( () => func.apply(this, arr), ms);
+            }
+        }
+    </script>
+</body>
+</html>

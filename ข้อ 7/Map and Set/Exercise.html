@@ -11,6 +11,7 @@
         function unique(arr) {
             let s = new Set (arr);
             let result = Array.from( s ).join(", ")
+            return result
         }
         let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-0"];
         alert( unique(values) );
