@@ -16,7 +16,7 @@
             for (let col = 0; col < n + (n - 1); col++) {
                 let line = '';
                 for (let row = 0; row < n + (n - 1); row++) {
-                    if (col == devide || row == devide || (col + row) === num ) {
+                    if ( col == devide || row == devide || (col + row) === num || (row + col) == num ) {
                         line += '*';
                     }else {
                         line += '-'
