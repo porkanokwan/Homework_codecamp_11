@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background multiple</title>
+    <style>
+        /*ใน background-position เราสามารถใส่ตัวเลขกำหนดให้มันขยับจากขอบเข้าข้างในboxได้ ถ้าตัวเลขติดลบได้รูปจะโดนดันออกนอกกรอบ จะ crop ภาพที่เลยทิ้ง
+        ไม่เหมือน overflow ที่เลยออกมาได้ ซึ่ง background ใส่ overflow ไม่ได้มันจะ crop ทิ้งเมื่อเลยกรอบ*/
+        /*ทำแบบ shorthand ได้แบบนี้ background-image:  url(https://picsum.photos/300)left center repeat, url(https://picsum.photos/200)right bottom repeat */
+        .box{
+            background-image:  url(https://picsum.photos/300), url(https://picsum.photos/200);
+            background-position: left 10px center, right 10px bottom 10px;
+            color: crimson;
+            background-repeat: no-repeat, no-repeat;
+            width: 600px;
+            height: 600px;
+            outline: 5px dashed darkred;
+        }
+        .box > p{
+            color: rgb(19, 5, 82);
+        }
+        #name1{
+            background-image: url(https://picsum.photos/400);
+            background-size: contain;
+        }
+        #name2{
+            background-image: url(https://picsum.photos/400);
+            background-size: cover;
+        }
+        /*clip ใช้กับสีพื้นหลัง*/
+        .box2{
+            background-color: chocolate;
+            width: 300px;
+            height: 300px;
+            outline: 5px dashed darkred;
+            padding: 20px;
+            background-clip: content-box;
+        }
+        /*origin ใช้กับรูปเท่านั้น*/
+        .box3{
+            background-image: url(https://picsum.photos/300);
+            border: 5px dashed darkred;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+        }
+        .box4{
+            border: 5px dashed darkred;
+            width: 300px;
+            height: 300px;
+            background-image:linear-gradient(to right, red, yellow)
+        }
+    </style>
+</head>
+<body>
+    <textarea id="name1" cols="30" rows="10"></textarea>
+    <hr>
+    <textarea id="name2" cols="30" rows="10"></textarea>
+    <div class="box">
+        <h1>Lorem ipsum </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eaque nam quia beatae minus praesentium dolor hic culpa omnis odio vitae, quae placeat magni eligendi! Veniam cupiditate accusantium architecto eveniet.</p>
+    </div>
+    <hr>
+
+    <div class="box2">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas animi magni cumque voluptates, rem ad cupiditate mollitia quae consequatur quod repellendus enim minus odio itaque, amet sint nesciunt eveniet in.</p>
+    </div>
+    <hr>
+    <div class="box3">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas animi magni cumque voluptates, rem ad cupiditate mollitia quae consequatur quod repellendus enim minus odio itaque, amet sint nesciunt eveniet in.</p>
+    </div>
+    <hr>
+    <div class="box4"></div>
+</body>
+</html>

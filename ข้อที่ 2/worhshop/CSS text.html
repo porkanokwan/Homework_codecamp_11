@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS text-align</title>
+    <style>
+        h1{
+            background-color: crimson;
+            color: wheat;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            letter-spacing: 5px;
+            text-shadow: 3px 4px 5px rgb(70, 68, 66);
+        }
+        /*จะใช้ <p>หรือ <span> ก็ได้สุดท้ายต้องมาเปลี่ยน display เป็น inline-block อยู่ดี*/
+        body{
+            background-color: whitesmoke;
+        }
+        span{
+            display: inline-block;
+            width: 300px;
+            text-align: justify;
+        }
+        /*ถ้ากำหนด width =100%; รูปจะแทรกแค่บรรทัดแรก ถ้าจะเอาทุกบรรทัดมาอยู่ขวามือของรูปต้องกำหนด width ห้ามให้ 100%;ไม่งั้นมันจะไม่ขึ้น */
+        img{
+            vertical-align: middle;
+            margin: 5px 10px;
+        }
+        /* vertical-align ใช้ได้กับรูปและ div หลายๆ อัน แต่เนื้อหาไม่เท่ากันก็ใช้จัดให้เท่ากันได้ แล้วก็ถ้าไม่มีค่า margin มันจะขึ้นไปชิดกับ h1 เพราะ h1 ก็ไม่มีค่า margin*/
+        p{
+            width: 600px;
+            border: 2px dashed blue;
+            text-align: justify;
+            text-indent: 5%;
+            letter-spacing: 1px;
+            line-height: 1.5;
+        }
+        /*text-indent คือย่อหน้าของ paragraph ซึ่'ใชhหน่วยเป็น px/em/% (ถ้าเป็น % จะหมายความว่า 5% ของ 600px)ก็ได้*/
+        /*letter-spacing ระยะห่างระหว่างตัวอักษร*/
+    </style>
+</head>
+<body>
+    <h1>Header 1</h1>
+    <img src="https://picsum.photos/600" alt=""><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet, excepturi numquam accusantium perspiciatis consequatur saepe omnis itaque veniam dolor.</span>
+้<hr>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est et reprehenderit rerum natus. Eveniet, cupiditate. Ea facilis maiores repudiandae ducimus corrupti quas ipsam beatae enim fugit id incidunt soluta, pariatur suscipit voluptatum earum ipsa exercitationem inventore aliquam consequatur modi officiis? Error sequi nisi illum sed voluptatum a consequatur unde ea?</p>
+</body>
+</html>

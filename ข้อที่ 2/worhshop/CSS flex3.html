@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex basis</title>
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 80vw;
+            height: 80vh;
+            background-color: indianred;
+            margin: 10vh auto;
+        }
+        .container > *{
+            background-color: lemonchiffon;
+            /* width: 100px; */
+            /* height: 100px; */
+            margin: 5px;
+            padding: 20px;
+            font-size: 30px;
+            line-height: 50px;
+        }
+        /*ควรใช้ flex basis ใช้ได้กับ flex direction: row,col 
+        แต่ถ้า width ใช้ได้แค่กับ row เพราะมันยึดแค่แนวนอนของหน้าเว็บ*/
+        .item2{
+            flex-basis: 40%;
+            /* width: 20%; */
+        }
+        .item3{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+</body>

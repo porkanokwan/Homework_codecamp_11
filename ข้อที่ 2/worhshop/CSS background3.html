@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background attachment</title>
+    <style>
+        body{
+            height: 200vh;
+        }
+        /*fixed รูปจะอยู่ที่เดิม ถ้าเราเลื่อนลงผ่านมันจะเลื่อนให้เห็นภาพด้านล่าง*/
+        .box{
+            background-image: url(/pic/mason-field-z1bunSbbOt0-unsplash.jpg);
+            width: 600px;
+            height: 150px;
+            color: wheat;
+            background-attachment: fixed;
+            margin-top: 200px;
+        }
+        /*รูปจะไปตามที่เนื้อหาข้างใน ถ้าเราเลื่อนลงมันจะโดนผลักขึ้นทั้งหมดและเห็นแค่ภาพเดิมไม่มีส่วนอื่นของภาพให้เห็น*/
+        .box2{
+            background-image: url(/pic/mason-field-z1bunSbbOt0-unsplash.jpg);
+            width: 600px;
+            height: 200px;
+            color: brown;
+            background-attachment: scroll;
+        }
+        .picbox{
+            width: 300px;
+            height: 300px;
+            /* overflow: hidden; */
+        }
+        .picbox img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fixed picture</h1>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus non neque, eum velit iure vero praesentium alias, dolor vel voluptates id nostrum commodi dolorem cumque optio, enim deserunt quisquam expedita. Vitae reiciendis magni dolore asperiores voluptatibus, suscipit perferendis eligendi tenetur, numquam rem quod, maiores aliquam possimus aut ea ab qui.
+    </div>
+    <hr>
+    <h1>Scroll picture</h1>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ea totam fugiat perspiciatis. At atque dicta omnis quos accusantium aliquam earum et ipsum excepturi temporibus aperiam, magni fugit natus voluptates incidunt, vero corrupti provident. Voluptatem sed beatae vitae magnam? Consequatur laborum fugiat aperiam ipsa nemo doloremque quibusdam accusamus amet eligendi.
+    </div>
+    <hr>
+        <div class="picbox">
+        <img src="/pic/mason-field-z1bunSbbOt0-unsplash.jpg" alt="">
+    </div>
+</body>
+</html>

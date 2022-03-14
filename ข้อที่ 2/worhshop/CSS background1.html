@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background image</title>
+    <style>
+        html{
+            background-image: url(/pic/qijin-xu-374ymy99Has-unsplash.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        /*ใส่ลงใน body ก็ได้แต่ body มี margin ที่ต้องมาแก้ทีหลัง เลยนิยมใช้ html มากกว่า*/
+        /*html {background-image: url(/pic/erwann-letue-nLuXot38_rw-unsplash.jpg);} จะเป็นพื้นหลังทั้งหน้าเว็บ*/
+        /*ใช้ overflow:hidden เพื่อ crop รูปตามกรอบที่เรากำหนด*/
+        .imgbox {
+            outline: 2px dashed tomato;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        /*ใช้ในการย่อรูปให้อยู่ในกรอบที่เรากำหนด*/
+        .imgbox > img {
+            width: 100%;
+        }
+        .box {
+            background-image: url(/pic/daniel-leone-v7daTKlZzaw-unsplash.jpg);
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgbox">
+        <img src="/pic/mason-field-z1bunSbbOt0-unsplash.jpg" alt="">
+    </div>
+    <br><br>
+    <div class="box"></div>
+</body>
+</html>

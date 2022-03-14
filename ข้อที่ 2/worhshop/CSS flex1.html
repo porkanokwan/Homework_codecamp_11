@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex container</title>
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        /*flex direction มี row กับ col ถ้าเราตั้ง item เป็น col จะทำให้ justify content 
+        จัด item ในแถวของมันคือตรงที่ col อยู่จะเป็นแนวนอนสำหรับการจัด item ของ justify content*/
+        .container{
+            display: flex;
+            flex-direction: row; /*row กับ nowrap เป็นค่า default ไม่ต้องใส่ก็ได้ */
+            flex-wrap: nowrap; /*wrap เมื่อไหร่มันจะฟัง align content*/
+            align-content: flex-start;
+            justify-content: flex-start; /*จัดตามการเรียงตัวของ item มันวางแนวไหนมันจะไปจัดตามแนวนั้น*/
+            align-items: flex-end; /*ตรงข้ามกับ justify เสมอ*/
+            width: 80vw;
+            height: 80vh;
+            background-color: indianred;
+            margin: 10vh auto; /*จะตรงกลางเมื่อเลขลงตัว 10vh จะเป็น top, bottom ส่วน Lt, Rt เป็น auto*/
+        }
+        /*ถ้าไม่ตั้ง width, height, justify content จะกลายเป็น stretch 
+        แต่ถ้าตั้ง width, height ของ item จะเป็นไปตามที่เราตั้งไม่สนว่าจะมี justify หรือไม่ */
+        .container > *{
+            background-color: lemonchiffon;
+            /* width: 100px; */
+            /* height: 100px; */
+            margin: 5px;
+            padding: 20px;
+            font-size: 30px;
+            line-height: 50px;
+        }
+        .item2{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item1">1</div>
+        <div class="item4">2</div>
+        <div class="item3">3</div>
+        <div class="item1">1</div>
+        <div class="item4">2</div>
+        <div class="item3">3</div>
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+    </div>
+</body>
+</html>

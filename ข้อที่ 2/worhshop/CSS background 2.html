@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background position</title>
+    <style>
+        /*ต้องกำหนดความกว้างและความสูงของ div class=box ทั้ง 3 อันรวมกันแล้วต้องใกล้เคียงกับความกว้างและความสูงจริงของรูป รูปถึงจะต่อกันสวย 
+        ถ้ารูปใหญ่แล้วความกว้างทั้ง 3 box รวมกันมันเล็กกว่า มันจะ crop รูปตามที่เรากำหนดมาให้แต่มันจะไม่ต่อกัน แต่ถ้าความกว้างและความสูงของทั้ง 3 box เล็กกว่า รูปมันจะต่อกันไม่สวยภาพมันจะเกิน*/
+        div[class^=box]{
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            background-image: url(/pic/mason-field-z1bunSbbOt0-unsplash.jpg);
+            transition: transform 0.2s;
+        }
+        div[class^=box]:hover{
+            transform: rotate(25deg);
+        }
+        .row2 > .box2{
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <img src="/pic/mason-field-z1bunSbbOt0-unsplash.jpg" alt="">
+    <div class="row1">
+        <div class="box1" style="background-position: left top;"></div>
+        <div class="box2" style="background-position: center top;"></div>
+        <div class="box3" style="background-position: right top;"></div>
+    </div>
+    <div class="row2">
+        <div class="box1" style="background-position: left center;"></div>
+        <div class="box2" style="background-position: center center;"></div>
+        <div class="box3" style="background-position: right center;"></div>
+    </div">
+    <div class="row3">
+        <div class="box1" style="background-position: left bottom;"></div>
+        <div class="box2" style="background-position: center bottom ;"></div>
+        <div class="box3" style="background-position: right bottom;"></div>
+    </div">
+
+</html>

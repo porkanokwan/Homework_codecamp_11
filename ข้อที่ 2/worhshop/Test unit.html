@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*โดยปกติ html เป็น root มีค่าตั้งต้นอยู่แล้ว ถ้าเราไม่เอาก็แค่มาตั้งเอง*/
+        html{
+            font-size: 20px;
+        }
+        /*rem เป็นเท่าตัวของค่าเริ่มต้นของ html*/
+        /*vw, vh ใช้เมื่อจะกรอบกำหนดความกว้าง, สูงใน body ที่เราไม่รู้ขนาดพื้นที่ ถ้าเราไม่กำหนดมันจะคิดว่า ความกว้าง 100%ของ body แต่ความสูงเท่ากับตัวอักษร 
+        % ใช้ไม่ได้ในการกำหนดค.สูง tag ลูกของ body แต่หน่วยอื่นทำได้*/
+        .row{
+            background-color: coral;
+            width: 50vw;
+            height: 50vh;
+            padding: 5px;
+            font-size: 0.5rem;
+        }
+        /*em เป็นเท่าตัวของ font-size ของตัว parentที่มันอยู่*/
+        .col{
+            background-color: cornflowerblue;
+            width: 45%;
+            height: 50%;
+            margin: 0.4rem;
+            display: inline-block;
+            font-size: 0.8rem;
+        }
+        /*% กำหนดได้เมื่อมีขนาดพื้นที่กำหนดแน่นอนอยู่แล้ว*/
+    </style>
+</head>
+<body>
+    <h1>Head 1</h1>
+    <div class="row">
+        <div class="col">Paragraph1</div>
+        <div class="col">Paragraph2</div>
+    </div>
+</body>
+</html>

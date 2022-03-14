@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex lab 01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        header{
+            background-color: maroon;
+            height: 10vh;
+        }
+        main{
+            background-color: teal;
+            height: 80vh;
+            display: flex;
+        }
+        main > *{
+            outline: 3px dashed rgb(222, 241, 49);
+            flex-grow: 2;
+            text-align: center;
+        }
+        /*หรือจะใช้ position ก็ได้ เอา div ครอบ h1,p แล้วกำหนด style เป็น position:relative 
+        แล้วกำหนด top ได้เลย มันจะอยู่ตรงกลาง*/
+        .main-c{
+            flex-grow: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        footer{
+            background-color: lemonchiffon;
+            height: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <main>
+        <div class="main-l">Left</div>
+        <div class="main-c">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi ipsa dolorum laudantium et. Deserunt officia saepe distinctio neque sit obcaecati necessitatibus illo delectus quo ullam.</p>
+        </div>
+        <div class="main-r">Right</div>
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>

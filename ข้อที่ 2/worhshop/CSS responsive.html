@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex lab 01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /*max width คือความกว้างของกรอบทั้งหมดไม่ให้ขนาดเกิน 1000 ถ้าเกินจะเป็นหน้าโล่งๆ*/
+        body{
+            max-width: 1000px;
+            margin: auto; /*ช่วยให้ความกว้างไม่เกิน*/
+        }
+        header{
+            background-color: rgb(105, 70, 187);
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            list-style: none;
+            margin: 0; 
+            background: rgba(39, 166, 212, 0.384);
+        }
+
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            color: white;
+        }
+
+        .navigation a:hover {
+            background: #1d06eb;
+        } 
+
+        main{
+            background-color: teal;
+            background-image: url(https://picsum.photos/id/1015/1000);
+            height: 80vh;
+            display: flex;
+            flex-wrap: wrap; /*ช่วยให้เราไม่ต้องกำหนด max width คือเรากำหนดให้ main-l,r มีขนาดอย่างละ 100 ส่วน c มีขนาด 500 สามกล่องรวมกันเป็น 700 
+            พอเราย่อหน้าจอถึง 700 หรือน้อยกว่านั้นมันจะ wrap เอา r ไปขึ้นบรรทัดใหม่*/
+        }
+        main > *{
+            flex: 1;
+            text-align: center;
+        }
+        /*หรือจะใช้ position ก็ได้ เอา div ครอบ h1,p แล้วกำหนด style เป็น position:relative 
+        แล้วกำหนด top ได้เลย มันจะอยู่ตรงกลาง*/
+        .main-c{
+            flex: 3 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .main-l, .main-r{
+            flex-basis: 100px;
+            background-color: rgb(166, 88, 182, 0.7);
+        }
+        
+        footer{
+            background-color: rgb(105, 70, 187);
+            height: 10vh;
+            color: cornsilk;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+        @media (max-width: 700px) {
+            header{justify-content: center; text-align: center;}
+            .navigation{justify-content: space-between;}
+        }
+        @media (max-width: 600px){
+            header{height: auto;} /*ช่วยปรับความสูงตามขนาด content*/
+            .navigation{flex-flow: column;}
+            .navigation > li{ border-bottom: 1px solid lightgray;}
+        }
+        /*มี div อีกอันได้เพราะจะได้รวมทุกอันเป็นกลุ่มเดียวกัน กำหนด margin ร่วมกันทีเดียว*/
+    </style>
+
+</head>
+<body>
+    <header>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="main-l">
+            <h1>News</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis blanditiis veritatis aperiam accusamus fuga non impedit molestiae voluptas, eveniet tenetur placeat hic quidem cupiditate illo provident? Hic quas illum animi?</p>
+        </div>
+        <div class="main-c">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi ipsa dolorum laudantium et. Deserunt officia saepe distinctio neque sit obcaecati necessitatibus illo delectus quo ullam.</p>
+            <div style="margin: 60px 20px 0 60px;">
+                <h2 style="text-align:left;">Title</h2>
+                <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quo possimus reiciendis tempora placeat quos architecto tempore, deleniti veritatis, commodi iste repellendus est facilis aliquam?</p>
+            </div>
+        </div>
+        <div class="main-r" >
+            <h1>Ads</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam cupiditate praesentium suscipit nihil esse sit iusto, ullam porro repudiandae vitae ipsum modi dolorem quo id!</p>
+        </div>
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>

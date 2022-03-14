@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex grow/shrink</title>
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 80vw;
+            height: 80vh;
+            background-color: indianred;
+            margin: 10vh auto;
+        }
+        /*เมื่อหดหน้าจอ item ทุกอันจะโดนหักพื้นที่ไป 1 ส่วน แต่ item1 จะโดนหักไป 2 ส่วน*/
+        .container > *{
+            background-color: lemonchiffon;
+            /* width: 100px; */
+            /* height: 100px; */
+            margin: 5px;
+            padding: 20px;
+            font-size: 30px;
+            line-height: 50px;
+            width: 100px;
+            flex-shrink: 1;
+        }
+        /*item2 มีพื้นที่เป็น 3 ส่วนจากทั้งหมด*/
+        .item2{
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1" style="flex-shrink: 2;">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    
+    </div>
+</body>
+</html>
