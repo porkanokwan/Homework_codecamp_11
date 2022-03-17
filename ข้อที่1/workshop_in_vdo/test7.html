@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML test 7</title>
+    <style>
+        form{
+            background-color: bisque;
+            width: 500px;
+            text-align: right;
+            padding: 10px;
+        }
+        form label {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Form</h2>
+    <!--เราส่ง form ให้ echo cgi ทำงานเมื่อใส่ข้อมูล และ form/label/input มี display เป็น inline-->
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+        <label for="FirstName">First Name: </label>
+        <input type="text" name="FirstName"> <br><br>
+
+        <label for="Age">Age: </label>
+        <input type="text" name="Age"> 
+        <br><br>
+
+        <fieldset style="width: 200px; text-align: left; margin-left: 250px; border-color: aqua;">
+            <legend>Gender</legend>
+            <input type="radio" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="other">
+            <label for="other">Other</label>
+        </fieldset>
+        <!-- <p style="margin-right: 150px;">Gender: </p> -->
+
+        <!-- ใน type radio ตัว value กับ for ใน label ต้องชื่อเดียวกัน -->
+        <p style="margin-right: 150px;">Status: </p>
+        <input type="radio" name="status" value="single">
+        <label for="single">Single</label>
+        <input type="radio" name="status" value="married">
+        <label for="married">Married</label>
+        <br><br>
+
+        <!-- ใน type checkbox ตัว name กับ for ใน label ต้องชื่อเดียวกัน -->
+        <p style="margin-right: 150px;">Vehicle: </p>
+        <input type="checkbox" name="vehicle1" value="Bike">
+        <label for="vehicle1">I have a bike</label>
+        <br>
+        <input type="checkbox" name="vehicle2" value="Car">
+        <label for="vehicle2">I have a car</label>
+        <br>
+        <input type="checkbox" name="vehicle3" value="Boat">
+        <label for="vehicle3">I have a boat</label>
+        <br><br>
+
+        <span>Models: </span>
+        <select name="cars" id="cars" size="3" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="fiat">Fiat</option>
+            <option value="saab">Saab</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <textarea name="massage" cols="50" rows="4">ใส่ข้อมูล</textarea>
+        <br>
+
+        <!-- list กับ id ต้องชื่อเดียวกันเท่านั้น! -->
+        <input list="browser" name="browser">
+        <datalist id="browser">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <br><br>
+
+        <input type="submit" value="Cilck">
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML table test</title>
+    <style>
+        #t1{
+            font-size: 20px;
+            color: brown;
+            width: 40%;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: antiquewhite;
+            border: 3px solid lightpink;
+            color: cadetblue;
+        }
+        td{
+            border: 3px solid lightblue;
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee table</h2>
+    <table id="t1">
+        <tr>
+            <th>Name</th>
+            <th>Division</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Harry</td>
+            <td>Potter</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Jackson</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Van</td>
+            <td>Halen</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td colspan="2">เฉลี่ย</td>
+            <td>29</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>Contact-name</th>
+            <th>Phone no.</th>
+        </tr>
+        <tr>
+            <th>Harry</th>
+            <th>555-1234</th>
+        </tr>
+    </table>
+</body>
+</html>
