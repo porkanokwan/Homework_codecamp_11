@@ -1,0 +1,1 @@
+let WebService = 'https://github.com/panotza/pikkanode/blob/master/api-tester.js'
