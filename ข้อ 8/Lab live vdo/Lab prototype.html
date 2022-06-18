@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab prototype</title>
+</head>
+<body>
+    <script>
+        // Lab 1
+        // let arr = [1, 2, 3, 4, 5, 8]
+        // Array.prototype.max = () => {
+        //     let num = arr[0]
+        //         for (let i = 0; i < arr.length; i++) {
+        //             num = Math.max(num, arr[i]);
+        //         }
+        //     return num;
+        // }
+
+        // Array.prototype.sum = () => {
+        //     let num = 0;
+        //     for(let i = 0; i < arr.length; i++) {
+        //         num += arr[i]
+        //     }
+        //     return num;
+        // }
+
+        // console.log(arr.max());
+        // console.log(arr.sum());
+
+        
+        // Lab 2 
+        // Function.prototype.defer = () => {
+        //     setTimeout(() => {
+        //         alert('Hello!')
+        //     }, 1000);
+        // }
+        
+        // function f() {
+        //     alert('Hello!')
+        // };
+        // f.defer();
+
+
+        // เฉลย ใช้ Arrow function ไม่ได้เพราะไม่รู้จัก this
+        Array.prototype.max = function () {
+            return Math.max(...this);
+        };
+
+        Array.prototype.sum = function () {
+            return this.reduce((acc, el) => acc + el, 0);
+        };
+
+        const arr = [1, 2, 5, 10, 1, 11, 8];
+        console.log(arr.max());
+        console.log(arr.sum());
+
+
+        Function.prototype.defer = function(ms) {
+            setTimeout(this, ms) // this เป็นตัวแทนของ function ที่อยู่หน้า defer
+        }
+        
+        function f() {
+            alert('Hello!')
+        };
+        f.defer(1000);
+        </script>
+</body>
+</html>

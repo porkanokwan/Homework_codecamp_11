@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การใช้ JSX</title>
+    <!--เอา link มารับ-->
+    <script src="https://unpkg.com/react@15/dist/react.min.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js" crossorigin></script>
+
+    <!-- ถ้าจะใช้ JSX ต้องใช้ Babel ช่วย ต้องมี link มารับ Babel -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js" crossorigin></script>
+</head>
+<body>
+    <div id = "root"></div>
+    
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        
+        //props เป็นสิ่งถูกส่งเข้าไปใน component นั้นๆ จะไม่สามารถเปลี่ยนแปลงได้ ไม่เหมือน state
+        function greetingMessage(props) {
+            return <h1> Welcome {props.name} ! </h1>
+        }
+
+        const headingElement = <div className = "container">
+            // การใส่แบบ expression
+            {greetingMessage( {name: "React"} )}    
+            {greetingMessage( {name: "John"} )}    
+            {greetingMessage( {name: "Rabbit"} )}    
+
+            // การใส่แบบ JSX
+            <greetingMessage name = "React" />
+            <greetingMessage name = "John" />
+            <greetingMessage name = "Rabbit" />
+        </div>
+
+        ReactDOM.render(
+            headingElement,
+            rootElement
+        )
+    </script>
+</body>
+</html>

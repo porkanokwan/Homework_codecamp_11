@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "email": "a@gmail.com",
+            "password": 1111,
+            "point": 0
+        },
+        {
+            "email": "b@gmail.com",
+            "password": 2222,
+            "point": 1
+        },
+        {
+            "email": "c@gmail.com",
+            "password": 3333,
+            "point": 2
+        },
+        {
+            "email": "d@gmail.com",
+            "password": 4444,
+            "point": 3
+        },
+        {
+            "email": "e@gmail.com",
+            "password": 5555,
+            "point": 4
+        }
+    ]
+}

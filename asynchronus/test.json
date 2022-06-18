@@ -1,0 +1,10 @@
+{
+    "name": "",
+    "birthDate": ["20", "January", 2021], 
+    "address": {
+        "province": "Bangkok",
+        "district": "Bangkhunnon"
+    },
+    "isStatus": true,
+    "job": null
+}

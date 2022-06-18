@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การใช้ JSX</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <!--เอา link มารับ-->
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- ถ้าจะใช้ JSX ต้องใช้ Babel ช่วย ต้องมี link มารับ Babel -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js" crossorigin></script>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        const name = "David" //ใส่ expression ได้ เพราะ เป็น JS
+        const className = "container"
+        const props = {
+            className: "container-text",
+            onClick: ( () => console.log( "Hello everyone" ) )
+        }
+        //Syntax ของ JSX 
+        const headingElement = <div className = {className} {...props}> 
+            <h1 className = "react - text"> Hello {name} !! </h1> 
+        </div>
+        //div อันนี้จะกลายเป็น className = container-text ทันทีจากที่เราใช้ spread props
+
+        ReactDOM.render(
+            headingElement,
+            rootElement
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สร้างเว็บด้วย JS</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <script>
+        const rootElement = document.getElementById("root") //rootElement อ้างอิงถึง element ที่มี id ชื่อ root
+        const headingElement = document.createElement("h1") //headingElement รับการสร้าง tag h1
+        headingElement.className = "react-text" //กำหนด class ให้ tag h1
+        headingElement.textContent = "Hello React!!!" //กำหนดเนื้อหาใน tag h1
+        rootElement.append(headingElement) //ยัด h1 เข้าไปใน element ที่มี id เป็น root
+    </script>
+</body>
+</html>

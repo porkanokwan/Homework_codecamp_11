@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab logical operator</title>
+</head>
+<body>
+    <script>
+        // Lab 1
+        alert(null || 2 || undefined); // 2
+        alert(alert(1) || 2 || alert(3)); // 2
+        alert(1 && null && 2); // null
+        alert(alert(1) && alert(2)); // undefined
+        alert(null || (2 && 3) || 4)  // 3
+
+        // // Lab 2
+        if (-1 || 0) alert('first'); // ทำงาน
+        if (-1 && 0) alert('second'); // ไม่ทำงาน
+        if (null || -1 && 1) alert('third'); // ทำงาน
+
+        // Lab 3
+        let user = prompt('Enter your name');
+        if(user == '' || user == undefined) {
+            user = 'guest';
+            console.log('User : ' + user)
+        } else if(user == 'codecamp') {
+            let password = prompt('Enter your password');
+            if(password != '123456') {
+                alert('Wrong password');
+            }
+        } else {
+            alert(`Welcome ${user}`)
+            user = 'guest';
+            console.log('User : ' + user)
+        }
+    </script>
+</body>
+</html>

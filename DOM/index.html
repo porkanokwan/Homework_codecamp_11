@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none; /*ให้ tag ที่มี class hidden เปลี่ยน display เป็น none*/
+        }
+    </style>
+</head>
+<body>
+    <div id = 'main-header'>
+        <ul id="menu" style="background-color: lightpink;">
+            <li class="menu-item" style="background-color: antiquewhite;">Home</li>
+            <li class="menu-item" style="background-color: wheat;">Contact</li>
+        </ul>
+    </div>
+    <h1>
+        <!-- h1 prepend แทรกเป็น fistChild ของ h1 -->
+        Document Object Model
+        <!-- h1 append แทรกเป็น lastChild ของ h1 -->
+    </h1>
+    <h1 id="drag">Browser Object Model</h1>
+    <footer>
+        <ul>
+        <li class="menu-item">Footer</li>
+        </ul>
+    </footer>
+    <!-- Event handler: HTML-attribute -->
+    <!-- <button onclick="alert('Clicked!!')">Click to alert</button> -->
+
+    <!-- Event handler: DOM property -->
+    <button name="btn-name">Click to alert</button>
+    <input type="text">
+    <a href="http://google.com">Go to google</a>
+
+    <!-- เมื่อกด submit จะทำการส่งข้อมูลใน form ไปที่ เว็บที่อยู่ใน action และจะส่งข้อมูลแบบมี body ซึ่งในตัวอย่างนี้จะ error เพราะ google ไม่มี resource รองรับ request นี้-->
+    <form action="http://aaaaaabbbbbb.com" method="post">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button>Submit</button>
+    </form>
+    <script src="./main.js"></script>
+</body>
+</html>
