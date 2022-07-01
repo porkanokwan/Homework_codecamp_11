@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab</title>
-</head>
-<body>
+    <style>
+      .red {
+        background-color: red;
+      }
+      .block {
+        display: none;
+      }
+      .hidden {
+        display: none;
+      }
+      .error {
+        color: red;
+      }
+      .errorInput {
+        border-color: red;
+      }
+      .toggleText {
+        color: green;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
     <!-- Lab 1 -->
     <!-- <div>User:</div>
     <ul>
         <li>John</li>
         <li>Pete</li>
     </ul> -->
-    
+
     <!-- Lab 2, 3, 4 -->
     <!-- <div>
         <h2 class="title-1"> List of companies </h2>
@@ -25,11 +46,93 @@
     </div> -->
 
     <!-- Lab Modify 1 -->
-    <ul>
+    <!-- <ul>
         <li>Cows</li>
         <li>Donkeys</li>
         <li>Tigers</li>
-    </ul>
+    </ul> -->
+
+    <!-- Lab Modify 3 -->
+    <!-- <ol id="elem">
+      <li>Hello</li>
+      <li>World</li>
+    </ol> -->
+
+    <!-- Lab Modify 4 -->
+    <!-- <button class="btn">Submit</button> -->
+
+    <!-- Lab event 2 - 3 -->
+    <!-- <form>
+      HTML attributes
+      <form id="form" onsubmit="alert('Form is submitted')">
+      <button type="button">Submit</button>
+    </form> -->
+
+    <!-- Lab event 4 -->
+    <!-- <a href="http://google.com">Google</a> -->
+
+    <!-- Lab event 5 -->
+    <!-- <label for="nickName">nickName: </label>
+    <input type="text" id="nickName" name="nickName" value="" />
+    <label for="job">job: </label>
+    <input type="text" id="job" name="job" value="" /> -->
+
+    <!-- Lab event 6 -->
+    <!-- <button>Click to hide me</button> -->
+
+    <!-- Lab event 7 -->
+    <!-- <button>Click to hide text</button>
+    <h1>Text</h1> -->
+
+    <!-- Lab event 8 -->
+    <!-- <button id="hide">Hide</button>
+    <h1 class="block">Lorem ipsum dolor sit.</h1> -->
+    <!-- เฉลย -->
+    <!-- <button>Hide</button>
+    <h1 class="hidden">Lorem ipsum dolor sit.</h1> -->
+
+    <!-- Lab event 9 -->
+    <!-- <input type="text" name="phoneNumber" value="" placeholder="Phone Number" />
+    <button>Check</button>
+    <p></p> -->
+    <!-- เฉลย -->
+    <!-- <input type="text" name="phoneNumber" value="" placeholder="Phone Number" />
+    <button>Check</button>
+    <p class="hidden">Phone Number is required</p> -->
+
+    <!-- Lab event 10 -->
+    <!-- <label for="province">Province: </label>
+    <select name="province" id="province" value="">
+      <option value="">select</option>
+      <option value="bangkok">Bangkok</option>
+      <option value="cnx">CNX</option>
+      <option value="chonburi">Chonburi</option>
+    </select>
+    <br />
+    <br />
+    <label for="district">District: </label>
+    <select name="district" id="district" value="">
+      <option value="">select</option>
+    </select> -->
+
+    <!-- Lab event 11 -->
+    <!-- <button id="increase">+</button>
+    <span>0</span>
+    <button id="decrease">-</button>
+    <button id="reset">Reset</button> -->
+    <!-- เฉลย -->
+    <!-- <button class="btn-add">+</button>
+    <span>0</span>
+    <button class="btn-subtract">-</button>
+    <button class="btn-reset">Reset</button> -->
+
+    <!-- Lab event 12 -->
+    <!-- <button id="addTodo">Add</button>
+    <ul id="listTodo" style="list-style-type: none"></ul> -->
+    <!-- เฉลย -->
+    <button id="btn-add">Add</button>
+    <ul style="list-style-type: none"></ul>
+
     <script src="./lab.js"></script>
-</body>
+  </body>
 </html>

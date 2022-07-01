@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Class</title>
+  </head>
+  <body>
+    <script>
+      // Lab 1
+      // class Calculator {
+      //   constructor(value) {
+      //     this.value = value ?? 0;
+      //   }
+
+      //   sum(number) {
+      //     return (this.value += number);
+      //   }
+
+      //   subtract(number) {
+      //     return (this.value -= number);
+      //   }
+
+      //   multiply(number) {
+      //     return (this.value *= number);
+      //   }
+
+      //   divide(number) {
+      //     return (this.value /= number);
+      //   }
+
+      //   show() {
+      //     alert(this.value);
+      //   }
+      // }
+
+      // const calc = new Calculator(100);
+      // console.log(calc.sum(15));
+      // console.log(calc.subtract(5));
+      // console.log(calc.multiply(2));
+      // console.log(calc.divide(5));
+      // calc.show();
+
+      // เฉลย
+      // class Calculator {
+      //   constructor(value = 0) {
+      //     this.value = value;
+      //   }
+
+      //   sum(number) {
+      //     this.value += number;
+      //     return this;
+      //   }
+
+      //   subtract(number) {
+      //     this.value -= number;
+      //     return this;
+      //   }
+
+      //   multiply(number) {
+      //     this.value *= number;
+      //     return this;
+      //   }
+
+      //   divide(number) {
+      //     this.value /= number;
+      //     return this;
+      //   }
+
+      //   show() {
+      //     alert(this.value);
+      //     return this.value;
+      //   }
+      // }
+
+      // const calc = new Calculator(100);
+      // การเรียกใช้ medthod แบบ Chaining
+      // console.log(calc.sum(15).subtract(5).multiply(2).divide(5).show());
+
+      //   Lab2
+      // class Sale {
+      //   constructor(name, amount, price, discount) {
+      //     this.name = name;
+      //     this.amount = amount;
+      //     this.price = price;
+      //     this.discount = discount;
+      //   }
+
+      //   calcPrice() {
+      //     return (
+      //       this.amount *
+      //       this.price *
+      //       (1 - this.discount.slice(0, this.discount.length - 1) / 100)
+      //     );
+      //   }
+      // }
+
+      // class Beverage extends Sale {}
+
+      // const beverage = new Beverage("Pepsi", 3, 19, "10%");
+      // console.log(beverage);
+      // console.log(beverage.calcPrice());
+
+      // เฉลย
+      class Sale {
+        constructor(name) {
+          this.name = name;
+        }
+
+        calcPrice() {
+          return (
+            this.amount * this.price * (1 - this.discount / 100).toFixed(2)
+          );
+        }
+      }
+
+      class Beverage extends Sale {
+        constructor(name, amount, price, discount) {
+          super(name);
+          this.amount = amount;
+          this.price = price;
+          this.discount = discount.slice(0, discount.length - 1);
+        }
+      }
+      const beverage = new Beverage("Pepsi", 3, 19, "10%");
+      console.log(beverage);
+      console.log(beverage.calcPrice());
+    </script>
+  </body>
+</html>
